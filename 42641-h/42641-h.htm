@@ -1,0 +1,2185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .justify    { text-align: justify }
+  .center     { text-align: center; text-indent: 0 }
+  .centerleft { text-align: center; text-indent: 0 }
+  .right      { text-align: right;  text-indent: 0 }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0; 
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header            
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst, p.noindent { 
+    text-indent: 0 
+  }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em   10% }
+  div.image    { margin: 1.5em  0  }
+  div.caption  { margin: 1.5em  0 }
+  div.legend   { margin: 1.5em  0 }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td, 
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  div.footnote-group          { margin: 1em 0 }
+  table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important; 
+                    text-indent: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  .pageno           { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after     { color: gray; content: '[' attr(title) ']' }
+  .lineno           { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after     { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref      { float: right }
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /* DIV */
+  pre               { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+
+  /*]]>*/
+  </style>
+  <title>FRIENDS</title>
+</head>
+<body>
+  <div class="document" id="friends">
+    <h1 class="center document-title level-1 pfirst title"><span class="x-large">FRIENDS</span></h1><!-- this is the default PG-RST stylesheet -->
+    <!-- figure and image styles for non-image formats -->
+    <!-- default transition -->
+    <!-- default attribution -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <div class="clearpage"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None container titlepage">
+      <p class="center pfirst"><span class="x-large">FRIENDS</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">BY<br />
+      WILFRID WILSON GIBSON</span></p>
+      <div class="vspace" style="height: 3em"></div>
+      <p class="center pfirst"><span class="medium">LONDON<br />
+      ELKIN MATHEWS, CORK STREET<br />
+      M CM XVI</span></p>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-None container verso">
+      <p class="center pfirst"><em class="italics medium">BY THE SAME WRITER</em></p>
+      <div class="vspace" style="height: 1em"></div>
+      <p class="center pfirst"><span class="medium">(Uniform with FRIENDS)</span></p>
+      <div class="vspace" style="height: 1em"></div>
+      <p class="noindent pfirst"><span class="medium">BATTLE (1915).<br />
+      THOROUGHFARES (1914).<br />
+      BORDERLANDS (1914).<br />
+      FIRES (1912).<br />
+      DAILY BREAD (1910).<br />
+      AKRA THE SLAVE (1910).<br />
+      STONEFOLDS (1907).</span></p>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-None container dedication">
+      <p class="center pfirst"><span class="medium">TO THE MEMORY<br />
+      OF<br />
+      RUPERT BROOKE</span></p>
+      <div class="vspace" style="height: 3em"></div>
+    </div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <em class="italics">He's gone.</em>
+          </div>
+          <div class="line">
+            <em class="italics">I do not understand.</em>
+          </div>
+          <div class="line">
+            <em class="italics">I only know</em>
+          </div>
+          <div class="line">
+            <em class="italics">That as he turned to go</em>
+          </div>
+          <div class="line">
+            <em class="italics">And waved his hand</em>
+          </div>
+          <div class="line">
+            <em class="italics">In his young eyes a sudden glory shone:</em>
+          </div>
+          <div class="line">
+            <em class="italics">And I was dazzled by a sunset glow.</em>
+          </div>
+          <div class="line">
+            <em class="italics">And he was gone.</em>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>23rd April, 1915.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="large">CONTENTS</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="noindent pfirst"><a class="reference internal" href="#rupert-brooke">Rupert Brooke</a> <span><br /></span><a class="reference internal" href="#william-denis-browne">William Denis Browne</a> <span><br /></span><a class="reference internal" href="#tenants">Tenants</a> <span><br /></span><a class="reference internal" href="#sea-change">Sea-change</a> <span><br /></span><a class="reference internal" href="#gold">Gold</a> <span><br /></span><a class="reference internal" href="#the-old-bed">The Old Bed</a> <span><br /></span><a class="reference internal" href="#trees">Trees</a> <span><br /></span><a class="reference internal" href="#oblivion">Oblivion</a> <span><br /></span><a class="reference internal" href="#retreat">Retreat</a> <span><br /></span><a class="reference internal" href="#colour">Colour</a> <span><br /></span><a class="reference internal" href="#night">Night</a> <span><br /></span><a class="reference internal" href="#the-orphans">The Orphans</a> <span><br /></span><a class="reference internal" href="#the-pessimist">The Pessimist</a> <span><br /></span><a class="reference internal" href="#id1">?</a> <span><br /></span><a class="reference internal" href="#the-sweet-tooth">The Sweet-Tooth</a> <span><br /></span><a class="reference internal" href="#girl-s-song">Girl's Song</a> <span><br /></span><a class="reference internal" href="#the-ice-cart">The Ice Cart</a> <span><br /></span><a class="reference internal" href="#to-e-m">To E. M.</a> <span><br /></span><a class="reference internal" href="#marriage">Marriage</a> <span><br /></span><a class="reference internal" href="#roses">Roses</a> <span><br /></span><a class="reference internal" href="#for-g">For G.</a> <span><br /></span><a class="reference internal" href="#home">Home</a></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="rupert-brooke"><span class="large">RUPERT BROOKE</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="medium">I.</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Your face was lifted to the golden sky</span>
+          </div>
+          <div class="line">
+            <span>Ablaze beyond the black roofs of the square,</span>
+          </div>
+          <div class="line">
+            <span>As flame on flame leapt, flourishing in air</span>
+          </div>
+          <div class="line">
+            <span>Its tumult of red stars exultantly,</span>
+          </div>
+          <div class="line">
+            <span>To the cold constellations dim and high;</span>
+          </div>
+          <div class="line">
+            <span>And as we neared, the roaring ruddy flare</span>
+          </div>
+          <div class="line">
+            <span>Kindled to gold your throat and brow and hair</span>
+          </div>
+          <div class="line">
+            <span>Until you burned, a flame of ecstasy.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>The golden head goes down into the night</span>
+          </div>
+          <div class="line">
+            <span>Quenched in cold gloom--and yet again you stand</span>
+          </div>
+          <div class="line">
+            <span>Beside me now with lifted face alight,</span>
+          </div>
+          <div class="line">
+            <span>As, flame to flame, and fire to fire you burn...</span>
+          </div>
+          <div class="line">
+            <span>Then, recollecting, laughingly you turn,</span>
+          </div>
+          <div class="line">
+            <span>And look into my eyes and take my hand.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="medium">II.</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Once in my garret--you being far away</span>
+          </div>
+          <div class="line">
+            <span>Tramping the hills and breathing upland air,</span>
+          </div>
+          <div class="line">
+            <span>Or so I fancied--brooding in my chair,</span>
+          </div>
+          <div class="line">
+            <span>I watched the London sunshine feeble and grey</span>
+          </div>
+          <div class="line">
+            <span>Dapple my desk, too tired to labour more,</span>
+          </div>
+          <div class="line">
+            <span>When, looking up, I saw you standing there,</span>
+          </div>
+          <div class="line">
+            <span>Although I'd caught no footstep on the stair,</span>
+          </div>
+          <div class="line">
+            <span>Like sudden April at my open door.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>Though now beyond earth's farthest hills you fare,</span>
+          </div>
+          <div class="line">
+            <span>Song-crowned, immortal, sometimes it seems to me</span>
+          </div>
+          <div class="line">
+            <span>That, if I listen very quietly,</span>
+          </div>
+          <div class="line">
+            <span>Perhaps I'll hear a light foot on the stair,</span>
+          </div>
+          <div class="line">
+            <span>And see you, standing with your angel air,</span>
+          </div>
+          <div class="line">
+            <span>Fresh from the uplands of eternity.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="medium">III.</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Your eyes rejoiced in colour's ecstasy</span>
+          </div>
+          <div class="line">
+            <span>Fulfilling even their uttermost desire,</span>
+          </div>
+          <div class="line">
+            <span>When, over a great sunlit field afire</span>
+          </div>
+          <div class="line">
+            <span>With windy poppies, streaming like a sea</span>
+          </div>
+          <div class="line">
+            <span>Of scarlet flame that flaunted riotously</span>
+          </div>
+          <div class="line">
+            <span>Among green orchards of that western shire,</span>
+          </div>
+          <div class="line">
+            <span>You gazed as though your heart could never tire</span>
+          </div>
+          <div class="line">
+            <span>Of life's red flood in summer revelry.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>And as I watched you little thought had I</span>
+          </div>
+          <div class="line">
+            <span>How soon beneath the dim low-drifting sky</span>
+          </div>
+          <div class="line">
+            <span>Your soul should wander down the darkling way,</span>
+          </div>
+          <div class="line">
+            <span>With eyes that peer a little wistfully,</span>
+          </div>
+          <div class="line">
+            <span>Half-glad, half-sad, remembering, as they see</span>
+          </div>
+          <div class="line">
+            <span>Lethean poppies, shrivelling ashen grey.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="medium">IV.</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>October chestnuts showered their perishing gold</span>
+          </div>
+          <div class="line">
+            <span>Over us as beside the stream we lay</span>
+          </div>
+          <div class="line">
+            <span>In the Old Vicarage garden that blue day,</span>
+          </div>
+          <div class="line">
+            <span>Talking of verse and all the manifold</span>
+          </div>
+          <div class="line">
+            <span>Delights a little net of words may hold,</span>
+          </div>
+          <div class="line">
+            <span>While in the sunlight water-voles at play</span>
+          </div>
+          <div class="line">
+            <span>Dived under a trailing crimson bramble-spray,</span>
+          </div>
+          <div class="line">
+            <span>And walnuts thudded ripe on soft black mould.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>Your soul goes down unto a darker stream</span>
+          </div>
+          <div class="line">
+            <span>Alone, O friend, yet even in death's deep night</span>
+          </div>
+          <div class="line">
+            <span>Your eyes may grow accustomed to the dark,</span>
+          </div>
+          <div class="line">
+            <span>And Styx for you may have the ripple and gleam</span>
+          </div>
+          <div class="line">
+            <span>Of your familiar river, and Charon's bark</span>
+          </div>
+          <div class="line">
+            <span>Tarry by that old garden of your delight.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="william-denis-browne"><span class="large">WILLIAM DENIS BROWNE</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><span class="medium">(GALLIPOLI, 1915)</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Night after night we two together heard</span>
+          </div>
+          <div class="line">
+            <span>The music of the Ring,</span>
+          </div>
+          <div class="line">
+            <span>The inmost silence of our being stirred</span>
+          </div>
+          <div class="line">
+            <span>By voice and string.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>Though I to-night in silence sit, and you</span>
+          </div>
+          <div class="line">
+            <span>In stranger silence sleep,</span>
+          </div>
+          <div class="line">
+            <span>Eternal music stirs and thrills anew</span>
+          </div>
+          <div class="line">
+            <span>The severing deep.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="tenants"><span class="large">TENANTS</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Suddenly, out of dark and leafy ways,</span>
+          </div>
+          <div class="line">
+            <span>We came upon the little house asleep</span>
+          </div>
+          <div class="line">
+            <span>In cold blind stillness, shadowless and deep,</span>
+          </div>
+          <div class="line">
+            <span>In the white magic of the full moon-blaze.</span>
+          </div>
+          <div class="line">
+            <span>Strangers without the gate, we stood agaze,</span>
+          </div>
+          <div class="line">
+            <span>Fearful to break that quiet, and to creep</span>
+          </div>
+          <div class="line">
+            <span>Into the home that had been ours to keep</span>
+          </div>
+          <div class="line">
+            <span>Through a long year of happy nights and days</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>So unfamiliar in the white moon-gleam,</span>
+          </div>
+          <div class="line">
+            <span>So old and ghostly like a house of dream</span>
+          </div>
+          <div class="line">
+            <span>It seemed, that over us there stole the dread</span>
+          </div>
+          <div class="line">
+            <span>That even as we watched it, side by side,</span>
+          </div>
+          <div class="line">
+            <span>The ghosts of lovers, who had lived and died</span>
+          </div>
+          <div class="line">
+            <span>Within its walls, were sleeping in our bed.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="sea-change"><span class="large">SEA-CHANGE</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Wind-flicked and ruddy her young body glowed</span>
+          </div>
+          <div class="line">
+            <span>In sunny shallows, splashing them to spray;</span>
+          </div>
+          <div class="line">
+            <span>But when on rippled, silver sand she lay,</span>
+          </div>
+          <div class="line">
+            <span>And over her the little green waves flowed,</span>
+          </div>
+          <div class="line">
+            <span>Coldly translucent and moon-coloured showed</span>
+          </div>
+          <div class="line">
+            <span>Her frail young beauty, as if rapt away</span>
+          </div>
+          <div class="line">
+            <span>From all the light and laughter of the day</span>
+          </div>
+          <div class="line">
+            <span>To some twilit, forlorn sea-god's abode.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>Again into the sun with happy cry</span>
+          </div>
+          <div class="line">
+            <span>She leapt alive and sparkling from the sea,</span>
+          </div>
+          <div class="line">
+            <span>Sprinkling white spray against the hot blue sky,</span>
+          </div>
+          <div class="line">
+            <span>A laughing girl ... and yet, I see her lie</span>
+          </div>
+          <div class="line">
+            <span>Under a deeper tide eternally</span>
+          </div>
+          <div class="line">
+            <span>In cold moon-coloured immortality.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="gold"><span class="large">GOLD</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>All day the mallet thudded, far below</span>
+          </div>
+          <div class="line">
+            <span>My garret, in an old ramshackle shed</span>
+          </div>
+          <div class="line">
+            <span>Where ceaselessly, with stiffly nodding head</span>
+          </div>
+          <div class="line">
+            <span>And rigid motions ever to and fro</span>
+          </div>
+          <div class="line">
+            <span>A figure like a puppet in a show</span>
+          </div>
+          <div class="line">
+            <span>Before the window moved till day was dead,</span>
+          </div>
+          <div class="line">
+            <span>Beating out gold to earn his daily bread,</span>
+          </div>
+          <div class="line">
+            <span>Beating out thin fine gold-leaf blow on blow.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>And I within my garret all day long</span>
+          </div>
+          <div class="line">
+            <span>Unto that ceaseless thudding tuned my song,</span>
+          </div>
+          <div class="line">
+            <span>Beating out golden words in tune and time</span>
+          </div>
+          <div class="line">
+            <span>To that dull thudding, rhyme on golden rhyme.</span>
+          </div>
+          <div class="line">
+            <span>But in my dreams all night in that dark shed</span>
+          </div>
+          <div class="line">
+            <span>With aching arms I beat fine gold for bread.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-old-bed"><span class="large">THE OLD BED</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Streaming beneath the eaves, the sunset light</span>
+          </div>
+          <div class="line">
+            <span>Turns the white walls and ceiling to pure gold,</span>
+          </div>
+          <div class="line">
+            <span>And gold, the quilt and pillows on the old</span>
+          </div>
+          <div class="line">
+            <span>Fourposter bed--all day a cold drift-white--</span>
+          </div>
+          <div class="line">
+            <span>As if, in a gold casket glistering bright,</span>
+          </div>
+          <div class="line">
+            <span>The gleam of winter sunshine sought to hold</span>
+          </div>
+          <div class="line">
+            <span>The sleeping child safe from the dark and cold</span>
+          </div>
+          <div class="line">
+            <span>And creeping shadows of the coming night.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>Slowly it fades: and stealing through the gloom</span>
+          </div>
+          <div class="line">
+            <span>Home-coming shadows throng the quiet room,</span>
+          </div>
+          <div class="line">
+            <span>Grey ghosts that move unrustling, without breath,</span>
+          </div>
+          <div class="line">
+            <span>To their familiar rest, and closer creep</span>
+          </div>
+          <div class="line">
+            <span>About the little dreamless child asleep</span>
+          </div>
+          <div class="line">
+            <span>Upon the bed of bridal, birth and death.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="trees"><span class="large">TREES</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><span class="medium">(</span><em class="italics medium">To</em> <span class="medium">LASCELLES ABERCROMBIE)</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>The flames half lit the cavernous mystery</span>
+          </div>
+          <div class="line">
+            <span>Of the over-arching elm that loomed profound</span>
+          </div>
+          <div class="line">
+            <span>And mountainous above us, from the ground</span>
+          </div>
+          <div class="line">
+            <span>Soaring to midnight stars majestically,</span>
+          </div>
+          <div class="line">
+            <span>As, under the shelter of that ageless tree</span>
+          </div>
+          <div class="line">
+            <span>In a rapt dreaming circle we lay around</span>
+          </div>
+          <div class="line">
+            <span>The crackling faggots, listening to the sound</span>
+          </div>
+          <div class="line">
+            <span>Of old words moving in new harmony.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>And as you read, before our wondering eyes</span>
+          </div>
+          <div class="line">
+            <span>Arose another tree of mighty girth--</span>
+          </div>
+          <div class="line">
+            <span>Crested with stars though rooted in the earth,</span>
+          </div>
+          <div class="line">
+            <span>Its heavy-foliaged branches, lit with gleams</span>
+          </div>
+          <div class="line">
+            <span>Of ruddy firelight and the light of dreams--</span>
+          </div>
+          <div class="line">
+            <span>Soaring immortal to eternal skies.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="oblivion"><span class="large">OBLIVION</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Near the great pyramid, unshadowed, white,</span>
+          </div>
+          <div class="line">
+            <span>With apex piercing the white noon-day blaze,</span>
+          </div>
+          <div class="line">
+            <span>Swathed in white robes beneath the blinding rays</span>
+          </div>
+          <div class="line">
+            <span>Lie sleeping Bedouins drenched in white-hot light.</span>
+          </div>
+          <div class="line">
+            <span>About them, searing to the tingling sight</span>
+          </div>
+          <div class="line">
+            <span>Swims the white dazzle of the desert ways</span>
+          </div>
+          <div class="line">
+            <span>Where the sense shudders, witless and adaze,</span>
+          </div>
+          <div class="line">
+            <span>In a white void with neither depth nor height.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>Within the black core of the pyramid</span>
+          </div>
+          <div class="line">
+            <span>Beneath the weight of sunless centuries</span>
+          </div>
+          <div class="line">
+            <span>Lapt in dead night King Cheops lies asleep;</span>
+          </div>
+          <div class="line">
+            <span>Yet in the darkness of his chamber hid</span>
+          </div>
+          <div class="line">
+            <span>He knows no black oblivion more deep</span>
+          </div>
+          <div class="line">
+            <span>Than that blind white oblivion of noon skies.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="retreat"><span class="large">RETREAT</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Broken, bewildered by the long retreat</span>
+          </div>
+          <div class="line">
+            <span>Across the stifling leagues of southern plain,</span>
+          </div>
+          <div class="line">
+            <span>Across the scorching leagues of trampled grain,</span>
+          </div>
+          <div class="line">
+            <span>Half-stunned, half-blinded, by the trudge of feet</span>
+          </div>
+          <div class="line">
+            <span>And dusty smother of the August heat,</span>
+          </div>
+          <div class="line">
+            <span>He dreamt of flowers in an English lane,</span>
+          </div>
+          <div class="line">
+            <span>Of hedgerow flowers glistening after rain--</span>
+          </div>
+          <div class="line">
+            <span>All-heal and willow-herb and meadow-sweet.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>All-heal and willow-herb and meadow-sweet--</span>
+          </div>
+          <div class="line">
+            <span>The innocent names kept up a cool refrain--</span>
+          </div>
+          <div class="line">
+            <span>All-heal and willow-herb and meadow-sweet,</span>
+          </div>
+          <div class="line">
+            <span>Chiming and tinkling in his aching brain,</span>
+          </div>
+          <div class="line">
+            <span>Until he babbled like a child again--</span>
+          </div>
+          <div class="line">
+            <span>"All-heal and willow-herb and meadow-sweet."</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="colour"><span class="large">COLOUR</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>A blue-black Nubian plucking oranges</span>
+          </div>
+          <div class="line">
+            <span>At Jaffa by a sea of malachite</span>
+          </div>
+          <div class="line">
+            <span>In red tarboosh, green sash, and flowing white</span>
+          </div>
+          <div class="line">
+            <span>Burnous--among the shadowy memories</span>
+          </div>
+          <div class="line">
+            <span>That haunt me yet by these bleak northern seas</span>
+          </div>
+          <div class="line">
+            <span>He lives for ever in my eyes' delight,</span>
+          </div>
+          <div class="line">
+            <span>Bizarre, superb in young immortal might--</span>
+          </div>
+          <div class="line">
+            <span>A god of old barbaric mysteries.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>Maybe he lived a life of lies and lust:</span>
+          </div>
+          <div class="line">
+            <span>Maybe his bones are now but scattered dust</span>
+          </div>
+          <div class="line">
+            <span>Yet, for a moment he was life supreme</span>
+          </div>
+          <div class="line">
+            <span>Exultant and unchallenged: and my rhyme</span>
+          </div>
+          <div class="line">
+            <span>Would set him safely out of reach of time</span>
+          </div>
+          <div class="line">
+            <span>In that old heaven where things are what they seem.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="night"><span class="large">NIGHT</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Vesuvius, purple under purple skies</span>
+          </div>
+          <div class="line">
+            <span>Beyond the purple, still, unrippling sea;</span>
+          </div>
+          <div class="line">
+            <span>Sheer amber lightning, streaming ceaselessly</span>
+          </div>
+          <div class="line">
+            <span>From heaven to earth, dazzling bewildered eyes</span>
+          </div>
+          <div class="line">
+            <span>With all the terror of beauty; thus day dies</span>
+          </div>
+          <div class="line">
+            <span>That dawned in blue, unclouded innocency;</span>
+          </div>
+          <div class="line">
+            <span>And thus we look our last on Italy</span>
+          </div>
+          <div class="line">
+            <span>That soon, obscured by night, behind us lies.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>And night descends on us, tempestuous night,</span>
+          </div>
+          <div class="line">
+            <span>Night, torn with terror, as we sail the deep,</span>
+          </div>
+          <div class="line">
+            <span>And like a cataract down a mountain-steep</span>
+          </div>
+          <div class="line">
+            <span>Pours, loud with thunder, that red perilous fire...</span>
+          </div>
+          <div class="line">
+            <span>Yet shall the dawn, O land of our desire,</span>
+          </div>
+          <div class="line">
+            <span>Show thee again, re-orient, crowned with light!</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-orphans"><span class="large">THE ORPHANS</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>At five o'clock one April morn</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>I met them making tracks,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Young Benjamin and Abel Horn,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>With bundles on their backs.</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>Young Benjamin is seventy-five,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Young Abel, seventy-seven--</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>The oldest innocents alive</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Beneath that April heaven.</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>I asked them why they trudged about</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>With crabby looks and sour--</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>"And does your mother know you're out</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>At this unearthly hour?"</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>They stopped: and scowling up at me</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Each shook a grizzled head,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>And swore; and then spat bitterly,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>As with one voice they said:</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>"Homeless, about the country-side</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>We never thought to roam;</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>But mother, she has gone and died,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>And broken up the home."</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-pessimist"><span class="large">THE PESSIMIST</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>His body bulged with puppies--little eyes</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Peeped out of every pocket, black and bright;</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>And with as innocent, round-eyed surprise</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>He watched the glittering traffic of the night.</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>"What this world's coming to I cannot tell,"</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>He muttered, as I passed him, with a whine--</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>"Things surely must be making slap for hell,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>When no one wants these little dogs of mine."</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="id1"><span class="large">?</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Mooning in the moonlight</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>I met a mottled pig,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Grubbing mast and acorn,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>On the Gallows Rigg.</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>"Tell, oh, tell me truly,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>While I wander blind,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Do your peepy pig's eyes</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Really see the wind--</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>"See the great wind flowing</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Darkling and agleam,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Through the fields of heaven,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>In a crystal stream?</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>"Do the singing eddies</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Break on bough and twig,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Into silvery sparkles</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>For your eyes, O pig?</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>"Do celestial surges</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Sweep across the night,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Like a sea of glory</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>In your blessed sight?</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>"Tell, oh, tell me truly!"</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>But the mottled pig</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Grubbing mast and acorns</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Did not care a fig.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-sweet-tooth"><span class="large">THE SWEET-TOOTH</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Taking a turn after tea</span>
+          </div>
+          <div class="line">
+            <span>Through orchards of Mirabelea,</span>
+          </div>
+          <div class="line">
+            <span>Where clusters of yellow and red</span>
+          </div>
+          <div class="line">
+            <span>Dangled and glowed overhead,</span>
+          </div>
+          <div class="line">
+            <span>Who should I see</span>
+          </div>
+          <div class="line">
+            <span>But old Timothy,</span>
+          </div>
+          <div class="line">
+            <span>Hale and hearty as hearty could be--</span>
+          </div>
+          <div class="line">
+            <span>Timothy under a crab-apple tree.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>His blue eyes twinkling at me,</span>
+          </div>
+          <div class="line">
+            <span>Munching and crunching with glee,</span>
+          </div>
+          <div class="line">
+            <span>And wagging his wicked old head,</span>
+          </div>
+          <div class="line">
+            <span>"I've still got a sweet-tooth," he said.</span>
+          </div>
+          <div class="line">
+            <span>"A hundred and three</span>
+          </div>
+          <div class="line">
+            <span>Come January,</span>
+          </div>
+          <div class="line">
+            <span>I've one tooth left in my head," said he--</span>
+          </div>
+          <div class="line">
+            <span>Timothy under the crab-apple tree.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="girl-s-song"><span class="large">GIRL'S SONG</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>I saw three black pigs riding</span>
+          </div>
+          <div class="line">
+            <span>In a blue and yellow cart--</span>
+          </div>
+          <div class="line">
+            <span>Three black pigs riding to the fair</span>
+          </div>
+          <div class="line">
+            <span>Behind the old grey dappled mare--</span>
+          </div>
+          <div class="line">
+            <span>But it wasn't black pigs riding</span>
+          </div>
+          <div class="line">
+            <span>In a gay and gaudy cart</span>
+          </div>
+          <div class="line">
+            <span>That sent me into hiding</span>
+          </div>
+          <div class="line">
+            <span>With a flutter in my heart.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>I heard the cart returning,</span>
+          </div>
+          <div class="line">
+            <span>The jolting jingling cart--</span>
+          </div>
+          <div class="line">
+            <span>Returning empty from the fair</span>
+          </div>
+          <div class="line">
+            <span>Behind the old jog-trotting mare--</span>
+          </div>
+          <div class="line">
+            <span>But it wasn't the returning</span>
+          </div>
+          <div class="line">
+            <span>Of a clattering, empty cart</span>
+          </div>
+          <div class="line">
+            <span>That sent the hot blood burning</span>
+          </div>
+          <div class="line">
+            <span>And throbbing through my heart</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-ice-cart"><span class="large">THE ICE CART</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Perched on my city office-stool,</span>
+          </div>
+          <div class="line">
+            <span>I watched with envy, while a cool</span>
+          </div>
+          <div class="line">
+            <span>And lucky carter handled ice...</span>
+          </div>
+          <div class="line">
+            <span>And I was wandering in a trice,</span>
+          </div>
+          <div class="line">
+            <span>Far from the grey and grimy heat</span>
+          </div>
+          <div class="line">
+            <span>Of that intolerable street,</span>
+          </div>
+          <div class="line">
+            <span>O'er sapphire berg and emerald floe,</span>
+          </div>
+          <div class="line">
+            <span>Beneath the still, cold ruby glow</span>
+          </div>
+          <div class="line">
+            <span>Of everlasting Polar night,</span>
+          </div>
+          <div class="line">
+            <span>Bewildered by the queer half-light,</span>
+          </div>
+          <div class="line">
+            <span>Until I stumbled, unawares,</span>
+          </div>
+          <div class="line">
+            <span>Upon a creek where big white bears</span>
+          </div>
+          <div class="line">
+            <span>Plunged headlong down with flourished heels,</span>
+          </div>
+          <div class="line">
+            <span>And floundered after shining seals</span>
+          </div>
+          <div class="line">
+            <span>Through shivering seas of blinding blue.</span>
+          </div>
+          <div class="line">
+            <span>And as I watched them, ere I knew,</span>
+          </div>
+          <div class="line">
+            <span>I'd stripped, and I was swimming, too,</span>
+          </div>
+          <div class="line">
+            <span>Among the seal-pack, young and hale,</span>
+          </div>
+          <div class="line">
+            <span>And thrusting on with threshing tail,</span>
+          </div>
+          <div class="line">
+            <span>With twist and twirl and sudden leap</span>
+          </div>
+          <div class="line">
+            <span>Through crackling ice and salty deep--</span>
+          </div>
+          <div class="line">
+            <span>Diving and doubling with my kind,</span>
+          </div>
+          <div class="line">
+            <span>Until, at last, we left behind</span>
+          </div>
+          <div class="line">
+            <span>Those big, white, blundering bulks of death,</span>
+          </div>
+          <div class="line">
+            <span>And lay, at length, with panting breath</span>
+          </div>
+          <div class="line">
+            <span>Upon a far untravelled floe,</span>
+          </div>
+          <div class="line">
+            <span>Beneath a gentle drift of snow--</span>
+          </div>
+          <div class="line">
+            <span>Snow drifting gently, fine and white,</span>
+          </div>
+          <div class="line">
+            <span>Out of the endless Polar night,</span>
+          </div>
+          <div class="line">
+            <span>Falling and falling evermore</span>
+          </div>
+          <div class="line">
+            <span>Upon that far untravelled shore,</span>
+          </div>
+          <div class="line">
+            <span>Till I was buried fathoms deep</span>
+          </div>
+          <div class="line">
+            <span>Beneath that cold white drifting sleep--</span>
+          </div>
+          <div class="line">
+            <span>Sleep drifting deep,</span>
+          </div>
+          <div class="line">
+            <span>Deep drifting sleep...</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>The carter cracked a sudden whip:</span>
+          </div>
+          <div class="line">
+            <span>I clutched my stool with startled grip,</span>
+          </div>
+          <div class="line">
+            <span>Awakening to the grimy heat</span>
+          </div>
+          <div class="line">
+            <span>Of that intolerable street.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="to-e-m"><span class="large">TO E. M.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><span class="medium">(IN MEMORY OF R. B.)</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>The night we saw the stacks of timber blaze</span>
+          </div>
+          <div class="line">
+            <span>To terrible golden fury, young and strong</span>
+          </div>
+          <div class="line">
+            <span>He watched between us with dream-dazzled gaze</span>
+          </div>
+          <div class="line">
+            <span>Aflame, and burning like a god of song,</span>
+          </div>
+          <div class="line">
+            <span>As we together stood against the throng</span>
+          </div>
+          <div class="line">
+            <span>Drawn from the midnight of the city ways.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>To-night the world about us is ablaze</span>
+          </div>
+          <div class="line">
+            <span>And he is dead, is dead ... Yet, young and strong</span>
+          </div>
+          <div class="line">
+            <span>He watches with us still with deathless gaze</span>
+          </div>
+          <div class="line">
+            <span>Aflame, and burning like a god of song,</span>
+          </div>
+          <div class="line">
+            <span>As we together stand against the throng</span>
+          </div>
+          <div class="line">
+            <span>Drawn from the bottomless midnight of hell's ways.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>10th June, 1915.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="marriage"><span class="large">MARRIAGE</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Going my way of old,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Contented more or less,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>I dreamt not life could hold</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Such happiness.</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            <span>I dreamt not that love's way</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Could keep the golden height</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Day after happy day,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Night after night.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="roses"><span class="large">ROSES</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Red roses floating in a crystal bowl</span>
+          </div>
+          <div class="line">
+            <span>You bring, O love; and in your eyes I see,</span>
+          </div>
+          <div class="line">
+            <span>Blossom on blossom, your warm love of me</span>
+          </div>
+          <div class="line">
+            <span>Burning within the crystal of your soul--</span>
+          </div>
+          <div class="line">
+            <span>Red roses floating in a crystal bowl.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="for-g"><span class="large">FOR G.</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>All night under the moon</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Plovers are flying</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Over the dreaming meadows of silvery light,</span>
+          </div>
+          <div class="line">
+            <span>Over the meadows of June,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Flying and crying--</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Wandering voices of love in the hush of the night.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>All night under the moon,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Love, though we're lying</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Quietly under the thatch, in silvery light</span>
+          </div>
+          <div class="line">
+            <span>Over the meadows of June</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Together we're flying--</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Rapturous voices of love in the hush of the night.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>1915</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="home"><span class="large">HOME</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><span class="medium">I. RETURN</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Under the brown bird-haunted eaves of thatch</span>
+          </div>
+          <div class="line">
+            <span>The hollyhocks in crimson glory burned</span>
+          </div>
+          <div class="line">
+            <span>Against black timbers and old rosy brick,</span>
+          </div>
+          <div class="line">
+            <span>And over the green door in clusters thick</span>
+          </div>
+          <div class="line">
+            <span>Hung tangled passion-flowers, when we returned</span>
+          </div>
+          <div class="line">
+            <span>To our own threshold: and with hand on latch</span>
+          </div>
+          <div class="line">
+            <span>We stood a moment in the sunset gleam</span>
+          </div>
+          <div class="line">
+            <span>And looked upon our home as in a dream.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>Rapt in a golden glow of still delight</span>
+          </div>
+          <div class="line">
+            <span>Together on the threshold in the sun</span>
+          </div>
+          <div class="line">
+            <span>We stood rejoicing that we two had won</span>
+          </div>
+          <div class="line">
+            <span>To this deep golden peace ere day was done,</span>
+          </div>
+          <div class="line">
+            <span>That over gloomy plain and storm-swept height</span>
+          </div>
+          <div class="line">
+            <span>We two, O love, had won to home ere night.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="medium">II. CANDLE-LIGHT</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Where through the open window I could see</span>
+          </div>
+          <div class="line">
+            <span>The supper-table in the golden light</span>
+          </div>
+          <div class="line">
+            <span>Of tall white candles--brasses glinting bright</span>
+          </div>
+          <div class="line">
+            <span>On the black gleaming board, and crockery</span>
+          </div>
+          <div class="line">
+            <span>Coloured like gardens of old Araby--</span>
+          </div>
+          <div class="line">
+            <span>In your blue gown against the walls of white</span>
+          </div>
+          <div class="line">
+            <span>You stood adream, and in the starry night</span>
+          </div>
+          <div class="line">
+            <span>I felt strange loneliness steal over me.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>You stood with eyes upon the candle flame</span>
+          </div>
+          <div class="line">
+            <span>That kindled your thick hair to burnished gold,</span>
+          </div>
+          <div class="line">
+            <span>As in a golden spell that seemed to hold</span>
+          </div>
+          <div class="line">
+            <span>My heart's love rapt from me for evermore...</span>
+          </div>
+          <div class="line">
+            <span>And then you stirred, and opening the door,</span>
+          </div>
+          <div class="line">
+            <span>Into the starry night you breathed my name.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="medium">III. FIRELIGHT</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Against the curtained casement wind and sleet</span>
+          </div>
+          <div class="line">
+            <span>Rattle and thresh, while snug by our own fire</span>
+          </div>
+          <div class="line">
+            <span>In dear companionship that naught may tire</span>
+          </div>
+          <div class="line">
+            <span>We sit--you listening, sewing in your seat</span>
+          </div>
+          <div class="line">
+            <span>Half-dreaming in the glow of light and heat,</span>
+          </div>
+          <div class="line">
+            <span>I reading some old tale of love's desire</span>
+          </div>
+          <div class="line">
+            <span>That swept on gold wings to disaster dire</span>
+          </div>
+          <div class="line">
+            <span>Then rose re-orient from black defeat.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>I close the book, and louder yet the storm</span>
+          </div>
+          <div class="line">
+            <span>Threshes without. Your busy hands are still;</span>
+          </div>
+          <div class="line">
+            <span>And on your face and hair the light is warm,</span>
+          </div>
+          <div class="line">
+            <span>As we sit gazing on the coals' red gleam</span>
+          </div>
+          <div class="line">
+            <span>In a gold glow of happiness, and dream</span>
+          </div>
+          <div class="line">
+            <span>Diviner dreams the years shall yet fulfil.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="medium">IV. MIDNIGHT</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Between the midnight pillars of black elms</span>
+          </div>
+          <div class="line">
+            <span>The old moon hangs, a thin, cold, amber flame</span>
+          </div>
+          <div class="line">
+            <span>Over low ghostly mist: a lone snipe wheels</span>
+          </div>
+          <div class="line">
+            <span>Through shadowy moonshine, droning; and there steals</span>
+          </div>
+          <div class="line">
+            <span>Into my heart a fear without a name</span>
+          </div>
+          <div class="line">
+            <span>Out of primæval night's resurgent realms,</span>
+          </div>
+          <div class="line">
+            <span>Unearthly terror, chilling me with dread</span>
+          </div>
+          <div class="line">
+            <span>As I lie waking wide-eyed on the bed.</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span>And then you turn towards me in your sleep</span>
+          </div>
+          <div class="line">
+            <span>Murmuring, and with a sigh of deep content</span>
+          </div>
+          <div class="line">
+            <span>You nestle to my breast and over me</span>
+          </div>
+          <div class="line">
+            <span>Steals the warm peace of you; and, all fear spent,</span>
+          </div>
+          <div class="line">
+            <span>I hold you to me sleeping quietly,</span>
+          </div>
+          <div class="line">
+            <span>Till I, too, sink in slumber sound and deep.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="small">LONDON: PRINTED BY WILLIAM CLOWES AND SONS, LIMITED.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="large">By Wilfrid Wilson Gibson</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="noindent pfirst"><span>BATTLE. Crown 8vo. 1s. net. [</span><em class="italics">Third Thousand</em><span>]</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span>Some Extracts from early Press Notices</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>"With the exception of Rupert Brooke's five sonnets, '1914,' 'Battle' contains, we think, the only English poems about the war--so far--for which anyone would venture to predict a future on their own merits."--</span><em class="italics">The Athenæum</em><span>.</span></p>
+    <p class="pnext"><span>"Among the many books which the war has drawn forth it may safely be said that none contains more concentrated poignancy than the tiny pamphlet of verses which Mr. Gibson entitles 'Battle.' Sympathy and irony strive for the palm throughout. The little book is a monument to the wantonness of it all, to the cheapness of life in war, the carelessness as to the individual, the disregard alike of promise and performance, the elimination of personality. When war is declared, said Napoleon, there are no longer men, there is only a man. Napoleon spoke for the clear-sighted general in command; Mr. Gibson speaks for the perplexed soldier under orders, and, doing so, illustrates the other side of the medal. In war, he says, in effect, there are no longer men, there is no longer man, there are only sports of chance, pullers of triggers, bewildered fulfillers of instructions, cynical acceptors of destiny."--</span><em class="italics">The Times</em><span>.</span></p>
+    <p class="pnext"><span>"Each separate vision, though realised in the particular case, has universal range--that is where the greatness of the art lies."--GERALD GOULD in</span> <em class="italics">The Herald</em><span>.</span></p>
+    <p class="pnext"><span>"They are extremely objective; a series of short dramatic lyrics, written with the simplicity and directness which Mr. Gibson chiefly studies in his exceptional art, expressing, without any implied comment, but with profoundly implied emotion, the feelings, thoughts, sensations of soldiers in the midst of the actual experiences of modern warfare. The emotion they imply is not patriotic, but simply and broadly human; this is what war means, we feel; these exquisite bodies insulted by agony and death, these incalculable spirits devastated. What all this destruction is for is taken for granted. Modern warfare is not beautiful, and Mr. Gibson does not try to gloss it in the usual way, by underlining the heroism and endurance it evokes. All that is simply assumed in these poems, just as the common soldier himself assumes it. An almost appalling heroism is unemphatically revealed in them as the fundamental fact of usual human nature. This is the ground-bass, and above its constancy plays the ever-varying truth of what fighting means to some individual piece of human nature. The poems are moments isolated and fixed out of the infinite changing flux of human reaction to the terrible galvanism of war. But that thrilling galvanism does not alter human kind; and sometimes Mr. Gibson forces us to realise the vast unreason of war by bringing into withering contact with its current a mind still preoccupied with the habits of peace."--MR. LASCELLES ABERCROMBIE in</span> <em class="italics">The Quarterly Review</em><span>.</span></p>
+    <p class="pnext"><span>"Mr. Gibson's 'Battle' is the first considerable attempt (and we may easily expect that it will remain by far the most important attempt) to look at the war through the main plane, the basic facet, of the crystal of English war-spirit."</span></p>
+    <p class="pnext"><span>"Are they true? Does experience vouch for them? As a matter of fact, the veracity of these poems has been already vouched for from the trenches; we make no doubt that the more they are known, the more experience will endorse them."</span></p>
+    <p class="pnext"><span>"But, though these poems would have failed if their psychology had been plainly faulty, their worth as psychological documents is not the main thing about them. The main thing about them is just that they are extraordinary poems; by means of their psychology, no less and no more than by means of their metre, their rhyme, their intellectual form and their concrete imagery, they pierce us with flashing understanding of what the war is and means--not merely what it is to these individual pieces of ordinary human nature who are injured by it and who yet dominate it, but, by evident implication, what the war is in itself, as a grisly multitudinous whole. It seems to us beyond question that Mr. Gibson's 'Battle' is one of the most remarkable results the war has had in literature."--</span><em class="italics">The Nation</em><span>.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="italics">BY THE SAME WRITER</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>STONEFOLDS. Crown 8vo. 2s. 6d. net</span></p>
+    <p class="pnext"><span>(Uniform with 'Thoroughfares' and 'Borderlands')</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="medium">LONDON: ELKIN MATHEWS, CORK STREET, W.</span></p>
+    <div class="vspace" style="height: 6em"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="backmatter"></div>
+    <div class="cleardoublepage"></div>
+  </div>
+</body>
+</html>
